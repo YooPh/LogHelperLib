@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LogHelperLib</name>
+    </assembly>
+    <members>
+        <member name="T:LogHelperLib.LogHelper">
+            <summary>
+            异步日志记录封装类
+            </summary>
+        </member>
+        <member name="T:LogHelperLib.LogHelper.LogTarget">
+            <summary>
+            日志记录类型File为txt文件，Database为数据库记录
+            </summary>
+        </member>
+        <member name="F:LogHelperLib.LogHelper.logger">
+            <summary>
+            声明
+            </summary>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.#ctor(LogHelperLib.LogHelper.LogTarget,System.String)">
+            <summary>
+            根据选择进行LogBase实例
+            </summary>
+            <param name="target">日志保存的类型</param>
+            <param name="path">日志文件夹默认路径，例如：[软件要根目录\\Log]</param>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.#ctor(LogHelperLib.LogHelper.LogTarget)">
+            <summary>
+            根据选择进行LogBase实例
+            </summary>
+            <param name="target">日志保存的类型</param>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.Info(System.String,System.String,System.Int32)">
+            <summary>
+            写信息日志
+            </summary>
+            <param name="mes"></param>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.Error(System.String,System.String,System.Int32)">
+            <summary>
+            写错误日志
+            </summary>
+            <param name="mes"></param>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.Alarm(System.String,System.String,System.Int32)">
+            <summary>
+            写报警日志
+            </summary>
+            <param name="mes"></param>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.ReadInfoByDate(System.DateTime)">
+            <summary>
+            通过日期查找读取信息日志
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.ReadInfoByDateInterval(System.DateTime,System.DateTime)">
+            <summary>
+            通过日期区间查找读取信息日志
+            </summary>
+            <param name="date1"></param>
+            <param name="date2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.ReadErrorByDate(System.DateTime)">
+            <summary>
+            通过日期查找读取错误日志
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.ReadErrorByDateInterval(System.DateTime,System.DateTime)">
+            <summary>
+            通过日期区间查找读取错误日志
+            </summary>
+            <param name="date1"></param>
+            <param name="date2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.ReadAlarmByDate(System.DateTime)">
+            <summary>
+            通过日期查找读取报警日志
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.ReadAlarmByDateInterval(System.DateTime,System.DateTime)">
+            <summary>
+            通过日期区间查找报警日志
+            </summary>
+            <param name="date1"></param>
+            <param name="date2"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LogHelperLib.LogHelper.FileLogger">
+            <summary>
+            以文本文件形式记录日志类
+            </summary>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.FileLogger.Write">
+            <summary>
+            以文本文件形式写日志
+            </summary>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.FileLogger.ReadInfoByDate(System.DateTime)">
+            <summary>
+            通过日期读取信息日志
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.FileLogger.ReadInfoByDateInterval(System.DateTime,System.DateTime)">
+            <summary>
+            通过日期区间读取信息日志
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.FileLogger.ReadErrorByDate(System.DateTime)">
+            <summary>
+            通过日期读取错误日志
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.FileLogger.ReadErrorByDateInterval(System.DateTime,System.DateTime)">
+            <summary>
+            通过日期区间读取错误日志
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.FileLogger.ReadAlarmByDate(System.DateTime)">
+            <summary>
+            通过日期读取报警日志
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.FileLogger.ReadAlarmByDateInterval(System.DateTime,System.DateTime)">
+            <summary>
+            通过日期区间读取报警日志
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LogHelperLib.LogHelper.DBLogger">
+            <summary>
+            以数据库形式记录日志类
+            </summary>
+        </member>
+        <member name="T:LogHelperLib.LogHelper.LogBase">
+            <summary>
+            日志记录基类
+            </summary>
+        </member>
+        <member name="P:LogHelperLib.LogHelper.LogBase.InfoPath">
+            <summary>
+            信息日志记录文件夹路径
+            </summary>
+        </member>
+        <member name="P:LogHelperLib.LogHelper.LogBase.ErrorPath">
+            <summary>
+            错误日志记录文件夹路径
+            </summary>
+        </member>
+        <member name="P:LogHelperLib.LogHelper.LogBase.AlarmPath">
+            <summary>
+            报警日志记录文件夹路径
+            </summary>
+        </member>
+        <member name="F:LogHelperLib.LogHelper.LogBase._que">
+            <summary>
+            线程安全队列
+            </summary>
+        </member>
+        <member name="F:LogHelperLib.LogHelper.LogBase._mre">
+            <summary>
+            信号
+            </summary>
+        </member>
+        <member name="F:LogHelperLib.LogHelper.LogBase._lock">
+            <summary>
+            日志写锁
+            </summary>
+        </member>
+        <member name="F:LogHelperLib.LogHelper.LogBase.tempIndex">
+            <summary>
+            StackTrace栈空间的级别，0表示当前栈空间，1表示上一级的栈空间，依次类推
+            </summary>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.LogBase.Initialize">
+            <summary>
+            日志初始化
+            </summary>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.LogBase.Write">
+            <summary>
+            日志写的方法
+            </summary>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.LogBase.ReadInfoByDate(System.DateTime)">
+            <summary>
+            通过日期查找读取信息日志
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.LogBase.ReadInfoByDateInterval(System.DateTime,System.DateTime)">
+            <summary>
+            通过日期区间查找读取信息日志
+            </summary>
+            <param name="date1"></param>
+            <param name="date2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.LogBase.ReadErrorByDate(System.DateTime)">
+            <summary>
+            通过日期查找读取错误日志
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.LogBase.ReadErrorByDateInterval(System.DateTime,System.DateTime)">
+            <summary>
+            通过日期区间查找读取错误日志
+            </summary>
+            <param name="date1"></param>
+            <param name="date2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.LogBase.ReadAlarmByDate(System.DateTime)">
+            <summary>
+            通过日期查找读取报警日志
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.LogBase.ReadAlarmByDateInterval(System.DateTime,System.DateTime)">
+            <summary>
+            通过日期区间查找读取报警日志
+            </summary>
+            <param name="date1"></param>
+            <param name="date2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.LogBase.Error(System.String,System.String,System.Int32)">
+            <summary>
+            写错误日志
+            </summary>
+            <param name="mes">内容</param>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.LogBase.Info(System.String,System.String,System.Int32)">
+            <summary>
+            写信息日志
+            </summary>
+            <param name="mes">内容</param>
+        </member>
+        <member name="M:LogHelperLib.LogHelper.LogBase.Alarm(System.String,System.String,System.Int32)">
+            <summary>
+            写错误日志
+            </summary>
+            <param name="mes">内容</param>
+        </member>
+        <member name="T:LogHelperLib.LogHelper.LogBase.LogLevel">
+            <summary>
+            日志级别
+            </summary>
+        </member>
+        <member name="T:LogHelperLib.LogHelper.LogBase.LogMessage">
+            <summary>
+            消息实体
+            </summary>
+        </member>
+        <member name="P:LogHelperLib.LogHelper.LogBase.LogMessage.Level">
+            <summary>
+            日志级别
+            </summary>
+        </member>
+        <member name="P:LogHelperLib.LogHelper.LogBase.LogMessage.Message">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:LogHelperLib.LogHelper.LogBase.LogMessage.StackFrame">
+            <summary>
+            堆栈帧信息
+            </summary>
+        </member>
+        <member name="P:LogHelperLib.LogHelper.LogBase.LogMessage.OccurrenceTime">
+            <summary>
+            消息产生时间
+            </summary>
+        </member>
+        <member name="P:LogHelperLib.LogHelper.LogBase.LogMessage.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:LogHelperLib.LogHelper.LogBase.LogMessage.UserPermission">
+            <summary>
+            用户身份
+            </summary>
+        </member>
+    </members>
+</doc>

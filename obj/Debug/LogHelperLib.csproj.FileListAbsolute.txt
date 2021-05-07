@@ -1,0 +1,7 @@
+E:\散料贴片机项目\bulk-placement-machine\MSWIndustrialControl\LogHelperLib\bin\Debug\LogHelperLib.dll
+E:\散料贴片机项目\bulk-placement-machine\MSWIndustrialControl\LogHelperLib\bin\Debug\LogHelperLib.pdb
+E:\散料贴片机项目\bulk-placement-machine\MSWIndustrialControl\LogHelperLib\obj\Debug\LogHelperLib.csprojAssemblyReference.cache
+E:\散料贴片机项目\bulk-placement-machine\MSWIndustrialControl\LogHelperLib\obj\Debug\LogHelperLib.csproj.CoreCompileInputs.cache
+E:\散料贴片机项目\bulk-placement-machine\MSWIndustrialControl\LogHelperLib\obj\Debug\LogHelperLib.dll
+E:\散料贴片机项目\bulk-placement-machine\MSWIndustrialControl\LogHelperLib\obj\Debug\LogHelperLib.pdb
+E:\散料贴片机项目\bulk-placement-machine\MSWIndustrialControl\LogHelperLib\bin\Debug\LogHelperLib.xml
